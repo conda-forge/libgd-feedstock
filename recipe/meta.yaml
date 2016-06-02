@@ -13,26 +13,26 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
     - pkg-config
     - automake
     - gettext
-    - zlib 1.2*
-    - freetype 2.6*
+    - zlib 1.2.*
+    - freetype 2.6.*
     - jpeg 9*
-    - libpng 1.6*
+    - libpng >=1.6.21,<1.7
     - libtiff 4.0.*
     - fontconfig 2.11.*
     - libiconv
     - expat
   run:
-    - zlib 1.2*
-    - freetype 2.6*
+    - zlib 1.2.*
+    - freetype 2.6.*
     - jpeg 9*
-    - libpng 1.6*
+    - libpng >=1.6.21,<1.7
     - libtiff 4.0.*
     - fontconfig 2.11.*
     - libiconv
