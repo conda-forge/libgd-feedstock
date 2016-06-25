@@ -1,6 +1,7 @@
 #!/bin/sh
 
-aclocal && autoconf
+aclocal || exit 1
+autoconf || exit 1
 
 ./configure --prefix=$PREFIX \
             --without-xpm \
