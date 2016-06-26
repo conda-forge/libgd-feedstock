@@ -1,4 +1,4 @@
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 package:
   name: libgd
@@ -7,13 +7,13 @@ package:
 source:
   fn: libgd-{{ version }}.tar.gz
   url: https://github.com/libgd/libgd/releases/download/gd-{{version}}/libgd-{{ version }}.tar.gz
-  sha256: a763df35d653683beb79b9bca1944652b32abace9c8a5a93d5439841f3c1da89
+  sha256: 9890fd86792883df9201b2d87e7b68865a5e893f75132758c1e5c240a0462dc6
   patches:
     - osx_version.patch
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
 
 requirements:
   build:
