@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -24,7 +24,7 @@ requirements:
     - jpeg 9*
     - libpng >=1.6.23,<1.7
     - libtiff 4.0.*
-    - fontconfig 2.11.*
+    - fontconfig 2.12.*
     - libiconv
     - expat
   run:
@@ -33,7 +33,7 @@ requirements:
     - jpeg 9*
     - libpng >=1.6.23,<1.7
     - libtiff 4.0.*
-    - fontconfig 2.11.*
+    - fontconfig 2.12.*
     - libiconv
     - expat
 
