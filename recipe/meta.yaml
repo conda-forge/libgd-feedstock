@@ -45,8 +45,8 @@ test:
 about:
     home: http://libgd.github.io/
     summary: library for the dynamic creation of images
-    license: GD license
-    license_family: Other
+    license: GD
+    license_family: BSD
     license_file: COPYING
 
 extra:
