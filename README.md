@@ -3,13 +3,25 @@ About libgd
 
 Home: http://libgd.github.io/
 
-Package license: GD license
+Package license: GD
 
 Feedstock license: BSD 3-Clause
 
 Summary: library for the dynamic creation of images
 
 
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libgd-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libgd-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/libgd-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libgd-feedstock)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libgd/badges/version.svg)](https://anaconda.org/conda-forge/libgd)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libgd/badges/downloads.svg)](https://anaconda.org/conda-forge/libgd)
 
 Installing libgd
 ================
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `libgd` available on your platform
 ```
 conda search libgd --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libgd-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libgd-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libgd-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libgd-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libgd/badges/version.svg)](https://anaconda.org/conda-forge/libgd)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libgd/badges/downloads.svg)](https://anaconda.org/conda-forge/libgd)
 
 
 Updating libgd-feedstock
