@@ -4,7 +4,6 @@
             --without-xpm \
             --without-x \
             --disable-werror \
-            --without-webp \
 || { cat config.log; exit 1; }
 
 make && make install

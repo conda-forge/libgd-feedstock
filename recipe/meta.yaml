@@ -12,30 +12,33 @@ source:
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 3
 
 requirements:
   build:
     - pkg-config
-    - automake
     - gettext
     - zlib 1.2.*
-    - freetype 2.6.*
+    - freetype 2.7|2.7.*
     - jpeg 9*
     - libpng >=1.6.23,<1.7
     - libtiff 4.0.*
     - fontconfig 2.12.*
     - libiconv
+    - icu 56.*
     - expat
+    - libwebp
   run:
     - zlib 1.2.*
-    - freetype 2.6.*
+    - freetype 2.7|2.7.*
     - jpeg 9*
     - libpng >=1.6.23,<1.7
     - libtiff 4.0.*
     - fontconfig 2.12.*
     - libiconv
+    - icu 56.*
     - expat
+    - libwebp
 
 test:
   commands:
