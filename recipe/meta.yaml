@@ -9,6 +9,8 @@ source:
   fn: libgd-{{ version }}.tar.gz
   url: https://github.com/libgd/libgd/releases/download/gd-{{version}}/libgd-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+      - patches/tests.patch
 
 build:
   skip: true  # [win]
@@ -28,6 +30,8 @@ requirements:
     - icu 56.*
     - expat
     - libwebp
+    - automake
+
   run:
     - zlib 1.2.*
     - freetype 2.7|2.7.*

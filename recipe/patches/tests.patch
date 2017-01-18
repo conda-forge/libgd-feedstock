@@ -1,0 +1,44 @@
+diff --git a/tests/freetype/Makemodule.am b/tests/freetype/Makemodule.am
+index d252493..2b9f449 100644
+--- a/tests/freetype/Makemodule.am
++++ b/tests/freetype/Makemodule.am
+@@ -1,7 +1,7 @@
+-if HAVE_LIBFREETYPE
+-libgd_test_programs += \
+-	freetype/bug00132
+-endif
++#if HAVE_LIBFREETYPE
++#libgd_test_programs += \
++#	freetype/bug00132
++#endif
+ 
+ EXTRA_DIST += \
+ 	freetype/CMakeLists.txt \
+diff --git a/tests/gdimagestringft/CMakeLists.txt b/tests/gdimagestringft/CMakeLists.txt
+index a38613f..c89f8f0 100644
+--- a/tests/gdimagestringft/CMakeLists.txt
++++ b/tests/gdimagestringft/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ IF(FREETYPE_FOUND)
+ SET(TESTS_FILES
+-	gdimagestringft_bbox
++#	gdimagestringft_bbox
+ )
+ ENDIF(FREETYPE_FOUND)
+ 
+diff --git a/tests/gdimagestringft/Makemodule.am b/tests/gdimagestringft/Makemodule.am
+index 0dfe26f..aa1bd32 100644
+--- a/tests/gdimagestringft/Makemodule.am
++++ b/tests/gdimagestringft/Makemodule.am
+@@ -1,7 +1,7 @@
+-if HAVE_LIBFREETYPE
+-libgd_test_programs += \
+-	gdimagestringft/gdimagestringft_bbox
+-endif
++#if HAVE_LIBFREETYPE
++#libgd_test_programs += \
++#	gdimagestringft/gdimagestringft_bbox
++#endif
+ 
+ EXTRA_DIST += \
+ 	gdimagestringft/CMakeLists.txt

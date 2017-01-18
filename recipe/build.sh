@@ -1,5 +1,5 @@
 #!/bin/sh
-
+aclocal && autoconf
 ./configure --prefix=$PREFIX \
             --without-xpm \
             --without-x \
