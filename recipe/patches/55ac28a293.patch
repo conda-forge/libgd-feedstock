@@ -1,0 +1,24 @@
+commit 55ac28a293eaa8c531870c8bb8ecc04b333975f4
+Author: Christoph M. Becker <cmbecker69@gmx.de>
+Date:   Thu Jan 19 01:02:58 2017 +0100
+
+    Fix #357: 2.2.4: Segfault in test suite.
+    
+    We make sure to never pass a negative `int` as argument to a `size_t`
+    parameter.
+
+diff --git a/src/gd_io_dp.c b/src/gd_io_dp.c
+index eda2eeb..cb38794 100644
+--- a/src/gd_io_dp.c
++++ b/src/gd_io_dp.c
+@@ -292,6 +292,10 @@ static int dynamicGetbuf(gdIOCtxPtr ctx, void *buf, int len)
+ 		rlen = dp->realSize - dp->pos;
+ 	}
+ 
++	if (rlen < 0) {
++		return 0;
++	}
++
+ 	memcpy(buf, (void *) ((char *)dp->data + dp->pos), rlen);
+ 	dp->pos += rlen;
+ 
