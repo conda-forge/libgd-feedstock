@@ -1,5 +1,5 @@
-{% set version = "2.2.3" %}
-{% set sha256 = "458f80ffcac0ddfba7d3fb2986b6ec271123d4193478a4e807764134e5a6261d" %}
+{% set version = "2.2.4" %}
+{% set sha256 = "487a650aa614217ed08ab1bd1aa5d282f9d379cfd95c756aed0b43406381be65" %}
 
 package:
   name: libgd
@@ -10,11 +10,13 @@ source:
   url: https://github.com/libgd/libgd/releases/download/gd-{{version}}/libgd-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-      - patches/tests.patch
+      # see: https://github.com/libgd/libgd/issues/367
+      - patches/linux-fontconfig-basic.patch
+      - patches/55ac28a293.patch
 
 build:
   skip: true  # [win]
-  number: 3
+  number: 0
 
 requirements:
   build:
