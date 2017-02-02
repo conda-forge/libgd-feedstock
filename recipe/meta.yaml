@@ -10,9 +10,9 @@ source:
   url: https://github.com/libgd/libgd/releases/download/gd-{{version}}/libgd-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-      # see: https://github.com/libgd/libgd/issues/367
-      - patches/linux-fontconfig-basic.patch
-      - patches/55ac28a293.patch
+    # see: https://github.com/libgd/libgd/issues/367
+    - patches/linux-fontconfig-basic.patch
+    - patches/55ac28a293.patch
 
 build:
   skip: true  # [win]
@@ -25,11 +25,11 @@ requirements:
     - zlib 1.2.*
     - freetype 2.7|2.7.*
     - jpeg 9*
-    - libpng >=1.6.23,<1.7
+    - libpng >=1.6.28,<1.7
     - libtiff 4.0.*
     - fontconfig 2.12.*
     - libiconv
-    - icu 56.*
+    - icu 58.*
     - expat
     - libwebp
     - automake
@@ -38,11 +38,11 @@ requirements:
     - zlib 1.2.*
     - freetype 2.7|2.7.*
     - jpeg 9*
-    - libpng >=1.6.23,<1.7
+    - libpng >=1.6.28,<1.7
     - libtiff 4.0.*
     - fontconfig 2.12.*
     - libiconv
-    - icu 56.*
+    - icu 58.*
     - expat
     - libwebp
 
@@ -53,12 +53,13 @@ test:
     - test -f $PREFIX/lib/libgd.la
 about:
     home: http://libgd.github.io/
-    summary: library for the dynamic creation of images
+    summary: 'Library for the dynamic creation of images.'
     license: GD
     license_family: BSD
     license_file: COPYING
 
 extra:
-    recipe-maintainers:
-      - croth1
-      - ChrisBarker-NOAA
+  recipe-maintainers:
+    - croth1
+    - ChrisBarker-NOAA
+    - ocefpaf
