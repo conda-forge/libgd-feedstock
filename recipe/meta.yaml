@@ -50,6 +50,8 @@ test:
     - test -f $PREFIX/lib/libgd.a      # [linux]
     - test -f $PREFIX/lib/libgd.dylib  # [osx]
     - test -f $PREFIX/lib/libgd.la
+    - conda inspect linkages -p $PREFIX libgd  # [not win]
+    - conda inspect objects -p $PREFIX libgd  # [osx]
 
 about:
     home: http://libgd.github.io/
