@@ -7,7 +7,7 @@ Package license: GD
 
 Feedstock license: BSD 3-Clause
 
-Summary: library for the dynamic creation of images
+Summary: Library for the dynamic creation of images.
 
 
 
