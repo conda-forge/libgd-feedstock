@@ -1,5 +1,5 @@
-{% set version = "2.2.4" %}
-{% set sha256 = "487a650aa614217ed08ab1bd1aa5d282f9d379cfd95c756aed0b43406381be65" %}
+{% set version = "2.2.5" %}
+{% set sha256 = "a66111c9b4a04e818e9e2a37d7ae8d4aae0939a100a36b0ffb52c706a09074b5" %}
 
 package:
   name: libgd
@@ -12,21 +12,20 @@ source:
   patches:
     # see: https://github.com/libgd/libgd/issues/367
     - patches/linux-fontconfig-basic.patch
-    - patches/55ac28a293.patch
 
 build:
   skip: True  # [win]
-  number: 2
+  number: 0
 
 requirements:
   build:
     - pkg-config
     - gettext
-    - zlib 1.2.*
-    - freetype 2.7|2.7.*
+    - zlib 1.2.8
+    - freetype 2.7
     - jpeg 9*
     - libpng >=1.6.28,<1.7
-    - libtiff 4.0.*
+    - libtiff >=4.0.3,<4.0.8
     - fontconfig 2.12.*
     - libiconv
     - icu 58.*
@@ -34,11 +33,11 @@ requirements:
     - libwebp 0.5.*
     - automake
   run:
-    - zlib 1.2.*
-    - freetype 2.7|2.7.*
+    - zlib 1.2.8
+    - freetype 2.7
     - jpeg 9*
     - libpng >=1.6.28,<1.7
-    - libtiff 4.0.*
+    - libtiff >=4.0.3,<4.0.8
     - fontconfig 2.12.*
     - libiconv
     - icu 58.*
