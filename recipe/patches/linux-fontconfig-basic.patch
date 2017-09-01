@@ -1,37 +1,30 @@
 diff --git a/tests/fontconfig/CMakeLists.txt b/tests/fontconfig/CMakeLists.txt
-index 159130d..426a84d 100644
+index f78c4cf..2ae268f 100644
 --- a/tests/fontconfig/CMakeLists.txt
 +++ b/tests/fontconfig/CMakeLists.txt
-@@ -1,7 +1,7 @@
--IF(FREETYPE_FOUND AND FONTCONFIG_FOUND)
+@@ -1,8 +1,8 @@
+ if(FONTCONFIG_FOUND)
+ IF(FREETYPE_FOUND)
 -LIST(APPEND TESTS_FILES
 -    basic
 -)
--ENDIF(FREETYPE_FOUND AND FONTCONFIG_FOUND)
-+#IF(FREETYPE_FOUND AND FONTCONFIG_FOUND)
 +#LIST(APPEND TESTS_FILES
 +#    basic
 +#)
-+#ENDIF(FREETYPE_FOUND AND FONTCONFIG_FOUND)
+ ENDIF(FREETYPE_FOUND)
+ ENDIF(FONTCONFIG_FOUND)
  
- ADD_GD_TESTS()
 diff --git a/tests/fontconfig/Makemodule.am b/tests/fontconfig/Makemodule.am
-index cbde85b..0c85a5e 100644
+index cbde85b..9aa05e4 100644
 --- a/tests/fontconfig/Makemodule.am
 +++ b/tests/fontconfig/Makemodule.am
-@@ -1,9 +1,9 @@
--if HAVE_LIBFONTCONFIG
--if HAVE_LIBFREETYPE
+@@ -1,7 +1,7 @@
+ if HAVE_LIBFONTCONFIG
+ if HAVE_LIBFREETYPE
 -libgd_test_programs += \
 -	fontconfig/basic
--endif
--endif
-+#if HAVE_LIBFONTCONFIG
-+#if HAVE_LIBFREETYPE
 +#libgd_test_programs += \
 +#	fontconfig/basic
-+#endif
-+#endif
+ endif
+ endif
  
- EXTRA_DIST += \
- 	fontconfig/CMakeLists.txt
