@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: libgd-{{ version }}.tar.gz
   url: https://github.com/libgd/libgd/releases/download/gd-{{version}}/libgd-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
@@ -15,16 +14,16 @@ source:
 
 build:
   skip: True  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
     - pkg-config
     - gettext
-    - zlib 1.2.8
+    - zlib 1.2.11
     - freetype 2.7
     - jpeg 9*
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - libtiff >=4.0.3,<4.0.8
     - fontconfig 2.12.*
     - libiconv
@@ -33,10 +32,10 @@ requirements:
     - libwebp 0.5.*
     - automake
   run:
-    - zlib 1.2.8
+    - zlib 1.2.11
     - freetype 2.7
     - jpeg 9*
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - libtiff >=4.0.3,<4.0.8
     - fontconfig 2.12.*
     - libiconv
@@ -49,8 +48,8 @@ test:
     - test -f $PREFIX/lib/libgd.a      # [linux]
     - test -f $PREFIX/lib/libgd.dylib  # [osx]
     - test -f $PREFIX/lib/libgd.la
-    - conda inspect linkages -p $PREFIX libgd  # [not win]
-    - conda inspect objects -p $PREFIX libgd  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
     home: http://libgd.github.io/
