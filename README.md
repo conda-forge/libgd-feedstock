@@ -14,14 +14,16 @@ Summary: Library for the dynamic creation of images.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libgd-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libgd-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libgd-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libgd-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libgd-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libgd-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libgd-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libgd-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libgd/badges/version.svg)](https://anaconda.org/conda-forge/libgd)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libgd/badges/downloads.svg)](https://anaconda.org/conda-forge/libgd)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libgd-green.svg)](https://anaconda.org/conda-forge/libgd) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgd.svg)](https://anaconda.org/conda-forge/libgd) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgd.svg)](https://anaconda.org/conda-forge/libgd) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgd.svg)](https://anaconda.org/conda-forge/libgd) |
 
 Installing libgd
 ================
