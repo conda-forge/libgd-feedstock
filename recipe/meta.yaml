@@ -14,34 +14,37 @@ source:
 
 build:
   skip: True  # [win]
-  number: 3
+  number: 4
 
 requirements:
   build:
     - automake
-    - gettext
     - pkg-config
-    - expat 2.2.*
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - icu 58.*
-    - jpeg 9*
-    - libiconv 1.15
-    - libpng >=1.6.32,<1.6.35
-    - libtiff >=4.0.8,<4.0.10
-    - libwebp 0.5.*
-    - zlib 1.2.11
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - gettext
+    - expat
+    - fontconfig
+    - freetype
+    - icu
+    - jpeg
+    - libiconv
+    - libpng
+    - libtiff
+    - libwebp
+    - zlib
   run:
-    - expat 2.2.*
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - icu 58.*
-    - jpeg 9*
-    - libiconv 1.15
-    - libpng >=1.6.32,<1.6.35
-    - libtiff >=4.0.8,<4.0.10
-    - libwebp 0.5.*
-    - zlib 1.2.11
+    - expat
+    - fontconfig
+    - freetype
+    - icu
+    - jpeg
+    - libiconv
+    - libpng
+    - libtiff
+    - libwebp
+    - zlib
 
 test:
   commands:
