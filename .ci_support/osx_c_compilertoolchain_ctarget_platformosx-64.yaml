@@ -1,11 +1,13 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+build_number_decrement:
+- '1000'
 c_compiler:
 - toolchain_c
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-docker_image:
-- condaforge/linux-anvil
 expat:
 - '2.2'
 fontconfig:
@@ -16,12 +18,18 @@ icu:
 - '58'
 jpeg:
 - '9'
+libiconv:
+- '1.15'
 libpng:
 - 1.6.34
 libtiff:
 - 4.0.9
 libwebp:
 - '0.5'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 pin_run_as_build:
   expat:
     max_pin: x.x
@@ -33,6 +41,8 @@ pin_run_as_build:
     max_pin: x
   jpeg:
     max_pin: x
+  libiconv:
+    max_pin: x.x
   libpng:
     max_pin: x.x
   libtiff:
@@ -42,6 +52,11 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 target_platform:
-- linux-64
+- osx-64
+zip_keys:
+- - c_compiler
+  - channel_sources
+  - channel_targets
+  - build_number_decrement
 zlib:
 - '1.2'
