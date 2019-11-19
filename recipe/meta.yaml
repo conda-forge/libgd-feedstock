@@ -13,7 +13,7 @@ source:
 
 build:
   skip: True  # [win]
-  number: 1006
+  number: 1007
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libgd
     - {{ pin_subpackage('libgd', max_pin='x.x') }}
