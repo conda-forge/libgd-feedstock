@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/libgd/libgd/releases/download/gd-{{version}}/libgd-{{ version }}.tar.gz
+  url: https://github.com/libgd/libgd/releases/download/gd-{{ version }}/libgd-{{ version }}.tar.gz
   sha256: a66111c9b4a04e818e9e2a37d7ae8d4aae0939a100a36b0ffb52c706a09074b5
   patches:
     # see: https://github.com/libgd/libgd/issues/367
@@ -13,7 +13,7 @@ source:
 
 build:
   skip: True  # [win]
-  number: 1007
+  number: 1008
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libgd
     - {{ pin_subpackage('libgd', max_pin='x.x') }}
