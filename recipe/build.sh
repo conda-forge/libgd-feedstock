@@ -21,7 +21,9 @@ make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
 
 if [[ $target_platform == osx-64 ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
     make check || failed=1
+fi
     grep -rl "DYLD_LIBRARY_PATH=" tests | xargs sed -i.bak "s~DYLD_LIBRARY_PATH=.*~DYLD_LIBRARY_PATH=$PREFIX/lib~g"
 fi
 
