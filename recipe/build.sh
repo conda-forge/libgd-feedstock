@@ -20,16 +20,16 @@ autoreconf -vfi
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
 
-if [[ $target_platform == osx-64 ]]; then
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+  if [[ $target_platform == osx-64 ]]; then
     make check || failed=1
-fi
-    grep -rl "DYLD_LIBRARY_PATH=" tests | xargs sed -i.bak "s~DYLD_LIBRARY_PATH=.*~DYLD_LIBRARY_PATH=$PREFIX/lib~g"
-fi
+  grep -rl "DYLD_LIBRARY_PATH=" tests | xargs sed -i.bak "s~DYLD_LIBRARY_PATH=.*~DYLD_LIBRARY_PATH=$PREFIX/lib~g"
+  fi
 
-# see: https://github.com/libgd/libgd/issues/302
-export FREETYPE_PROPERTIES=truetype:interpreter-version=35
-make check || { cat tests/test-suite.log; exit 1; }
+  #^ see: https://github.com/libgd/libgd/issues/302
+  export FREETYPE_PROPERTIES=truetype:interpreter-version=35
+  make check || { cat tests/test-suite.log; exit 1; }
+fi
 
 # We can remove this when we start using the new conda-build.
 find $PREFIX -name '*.la' -delete
