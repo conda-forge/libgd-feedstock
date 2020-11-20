@@ -1,4 +1,4 @@
-{% set version = "2.2.5" %}
+{% set version = "2.3.0" %}
 
 package:
   name: libgd
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/libgd/libgd/releases/download/gd-{{ version }}/libgd-{{ version }}.tar.gz
-  sha256: a66111c9b4a04e818e9e2a37d7ae8d4aae0939a100a36b0ffb52c706a09074b5
+  sha256: 32590e361a1ea6c93915d2448ab0041792c11bae7b18ee812514fe08b2c6a342
   patches:
     # see: https://github.com/libgd/libgd/issues/367
     - patches/linux-fontconfig-basic.patch
 
 build:
-  skip: True  # [win]
-  number: 1008
+  skip: true  # [win]
+  number: 0
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libgd
     - {{ pin_subpackage('libgd', max_pin='x.x') }}
@@ -55,11 +55,11 @@ test:
     - test -f $PREFIX/lib/libgd${SHLIB_EXT}  # [not win]
 
 about:
-    home: http://libgd.github.io/
-    summary: 'Library for the dynamic creation of images'
-    license: GD
-    license_family: BSD
-    license_file: COPYING
+  home: http://libgd.github.io/
+  summary: Library for the dynamic creation of images
+  license: GD
+  license_family: BSD
+  license_file: COPYING
 
 extra:
   recipe-maintainers:
