@@ -21,8 +21,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - automake # [not-win]
-    - libtool # [not-win]
+    - automake  # [not-win]
+    - libtool  # [not-win]
     - gettext
     - pkg-config
     - make [unix]
@@ -37,7 +37,7 @@ requirements:
     - libpng
     - libtiff
     - libwebp
-    - xorg-libxpm # [win]
+    - xorg-libxpm  # [win]
     - zlib
   run:
     - expat
@@ -49,7 +49,7 @@ requirements:
     - libpng
     - libtiff
     - libwebp
-    - xorg-libxpm # [win]
+    - xorg-libxpm  # [win]
     - zlib
 
 test:
