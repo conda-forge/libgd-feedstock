@@ -8,9 +8,7 @@ echo %INCLUDE%
 echo %LIBRARY_INC%
 
 REM Build the lib...
-nmake /f %RECIPE_DIR%\Makefiletest.vc
-nmake /f %RECIPE_DIR%\Makefile.vc check
-REM nmake /f %RECIPE_DIR%\Makefile.vc build_libs
+nmake /f %RECIPE_DIR%\Makefile.vc build_libs
 if errorlevel 1 exit 1
 
 REM done compiling
