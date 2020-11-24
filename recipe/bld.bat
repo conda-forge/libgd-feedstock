@@ -1,14 +1,5 @@
-echo %RECIPE_DIR%
-
-echo current working dir is:
-echo %cd%
-echo
-echo inclue and library:
-echo %INCLUDE%
-echo %LIBRARY_INC%
-
 REM Build the lib...
-nmake /f %RECIPE_DIR%\Makefile.vc build_libs
+nmake /F %RECIPE_DIR%\Makefile.vc build_libs
 if errorlevel 1 exit 1
 
 REM done compiling
