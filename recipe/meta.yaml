@@ -5,8 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/libgd/libgd/releases/download/gd-{{ version }}/libgd-{{ version }}.tar.gz
-  sha256: 32590e361a1ea6c93915d2448ab0041792c11bae7b18ee812514fe08b2c6a342
+# direct source -- needs to have autoconf, etc run.
+# but this seems to work better than using straight ./configure with the released code
+  url: https://github.com/libgd/libgd/archive/gd-{{ version }}.tar.gz
+  sha256: a77dfbbf8bfa7f19c935c11f3b939321f8c1059953a91203158cb2dbf27a0f9e
+# the release tarball: but does not include getlib.sh
+#  url: https://github.com/libgd/libgd/releases/download/gd-{{ version }}/libgd-{{ version }}.tar.gz
+#  sha256: 32590e361a1ea6c93915d2448ab0041792c11bae7b18ee812514fe08b2c6a342
   patches:
     # see: https://github.com/libgd/libgd/issues/367
     - patches/linux-fontconfig-basic.patch
