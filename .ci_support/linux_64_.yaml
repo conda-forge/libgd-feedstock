@@ -11,7 +11,7 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-comp7
 expat:
-- '2.3'
+- '2'
 fontconfig:
 - '2.13'
 freetype:
@@ -25,10 +25,8 @@ libpng:
 libtiff:
 - '4'
 libwebp:
-- '1.1'
+- '1'
 pin_run_as_build:
-  expat:
-    max_pin: x.x
   fontconfig:
     max_pin: x
   freetype:
