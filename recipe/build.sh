@@ -2,6 +2,9 @@
 
 set -x
 
+export TEMP=$SRC_DIR/temp_files
+mkdir -p $TEMP
+
 if [[ ${target_platform} != *-64 ]]; then
   # https://github.com/libgd/libgd/issues/278
   export CFLAGS="$CFLAGS -ffp-contract=off"
