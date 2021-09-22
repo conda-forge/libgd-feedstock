@@ -1,4 +1,4 @@
-{% set version = "2.3.2" %}
+{% set version = "2.3.3" %}
 
 package:
   name: libgd
@@ -8,7 +8,7 @@ source:
 # direct source -- needs to have autoconf, etc run.
 # but this seems to work better than using straight ./configure with the released code
   url: https://github.com/libgd/libgd/archive/gd-{{ version }}.tar.gz
-  sha256: dcc22244d775f469bee21dce1ea42552adbb72ba0cc423f9fa6a64601b3a1893
+  sha256: 24429f9d0dbe0f865aaa4b1a63558242396ba9134e6cfd32ca5e486a84483350
 # the release tarball: but does not include getlib.sh
 #  url: https://github.com/libgd/libgd/releases/download/gd-{{ version }}/libgd-{{ version }}.tar.gz
 #  sha256: 32590e361a1ea6c93915d2448ab0041792c11bae7b18ee812514fe08b2c6a342
