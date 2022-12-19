@@ -1,5 +1,5 @@
 c_compiler:
-- vs2017
+- vs2019
 channel_sources:
 - conda-forge
 channel_targets:
@@ -7,7 +7,7 @@ channel_targets:
 expat:
 - '2'
 fontconfig:
-- '2.13'
+- '2'
 freetype:
 - '2'
 icu:
@@ -17,22 +17,9 @@ jpeg:
 libpng:
 - '1.6'
 libtiff:
-- '4'
+- '4.5'
 libwebp:
 - '1'
-pin_run_as_build:
-  fontconfig:
-    max_pin: x
-  freetype:
-    max_pin: x
-  jpeg:
-    max_pin: x
-  libpng:
-    max_pin: x.x
-  libtiff:
-    max_pin: x
-  zlib:
-    max_pin: x.x
 target_platform:
 - win-64
 zlib:
