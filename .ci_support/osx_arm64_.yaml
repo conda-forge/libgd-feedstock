@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '12'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 expat:
 - '2'
 fontconfig:
-- '2.13'
+- '2'
 freetype:
 - '2'
 icu:
@@ -19,30 +19,15 @@ icu:
 jpeg:
 - '9'
 libiconv:
-- '1.16'
+- '1'
 libpng:
 - '1.6'
 libtiff:
-- '4'
+- '4.5'
 libwebp:
 - '1'
 macos_machine:
 - arm64-apple-darwin20.0.0
-pin_run_as_build:
-  fontconfig:
-    max_pin: x
-  freetype:
-    max_pin: x
-  jpeg:
-    max_pin: x
-  libiconv:
-    max_pin: x.x
-  libpng:
-    max_pin: x.x
-  libtiff:
-    max_pin: x
-  zlib:
-    max_pin: x.x
 target_platform:
 - osx-arm64
 zlib:
