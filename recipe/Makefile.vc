@@ -97,7 +97,7 @@ LIB_OBJS= \
   $(LIBGD_OBJ_DIR)\gd_webp.obj
 
 LIBS=kernel32.lib ole32.lib user32.lib advapi32.lib shell32.lib ws2_32.lib Dnsapi.lib Gdi32.Lib
-LIBS_GD=libjpeg.lib freetype.lib libpng.lib iconv.lib zlib.lib libwebp.lib libxpm.dll.a tiff.lib
+LIBS_GD=jpeg.lib freetype.lib libpng.lib iconv.lib zlib.lib libwebp.lib libxpm.dll.a tiff.lib
 
 PROG_EXES= \
 	$(LIBGD_OBJ_DIR)\gdcmpgif.exe \
