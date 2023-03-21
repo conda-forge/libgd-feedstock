@@ -1,11 +1,11 @@
-About libgd
-===========
+About libgd-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libgd-feedstock/blob/main/LICENSE.txt)
 
 Home: http://libgd.github.io/
 
 Package license: GD
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libgd-feedstock/blob/main/LICENSE.txt)
 
 Summary: Library for the dynamic creation of images
 

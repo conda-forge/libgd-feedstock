@@ -18,7 +18,7 @@ source:
 
 build:
   #skip: True  # [win]
-  number: 4
+  number: 5
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libgd
     - {{ pin_subpackage('libgd', max_pin='x.x') }}
