@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '11'
+- '12'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -21,7 +21,7 @@ fontconfig:
 freetype:
 - '2'
 icu:
-- '72'
+- '73'
 libjpeg_turbo:
 - 2.1.5
 libpng:
