@@ -18,7 +18,7 @@ source:
 
 build:
   #skip: True  # [win]
-  number: 9
+  number: 10
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libgd
     - {{ pin_subpackage('libgd', max_pin='x.x') }}
@@ -26,6 +26,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - automake  # [not-win]
     - libtool  # [not-win]
     - gettext
