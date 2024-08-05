@@ -26,7 +26,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - automake  # [not-win]
     - libtool  # [not-win]
     - gettext
@@ -34,18 +34,6 @@ requirements:
     - make  # [unix]
     - cmake  # [win]
   host:
-    - expat
-    - fontconfig
-    - freetype
-    - icu
-    - libjpeg-turbo
-    - libiconv  # [osx]
-    - libpng
-    - libtiff
-    - libwebp
-    - xorg-libxpm  # [win]
-    - zlib
-  run:
     - expat
     - fontconfig
     - freetype
