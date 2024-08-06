@@ -1,5 +1,7 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +13,7 @@ fontconfig:
 freetype:
 - '2'
 icu:
-- '73'
+- '75'
 libjpeg_turbo:
 - '3'
 libpng:
@@ -23,4 +25,4 @@ libwebp:
 target_platform:
 - win-64
 zlib:
-- '1.2'
+- '1'
