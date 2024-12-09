@@ -32,6 +32,7 @@ requirements:
     - pkg-config
     - make  # [unix]
     - cmake  # [win]
+    - m2-sed  # [win]
   host:
     - expat
     - fontconfig
