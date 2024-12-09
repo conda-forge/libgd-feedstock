@@ -26,7 +26,7 @@ make install
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
   if [[ $target_platform == osx-64 ]]; then
     make check || failed=1
-  grep -rl "DYLD_LIBRARY_PATH=" tests | xargs sed -i.bak "s~DYLD_LIBRARY_PATH=.*~DYLD_LIBRARY_PATH=$PREFIX/lib~g"
+    grep -rl "DYLD_LIBRARY_PATH=" tests | xargs sed -i.bak "s~DYLD_LIBRARY_PATH=.*~DYLD_LIBRARY_PATH=$PREFIX/lib~g"
   fi
 
   #^ see: https://github.com/libgd/libgd/issues/302
