@@ -1,0 +1,10 @@
+prefix=@prefix@
+libdir=@prefix@/lib
+includedir=@prefix@/include
+
+Name: gd
+Description: GD graphics library
+Version: @VERSION@
+Requires:
+Cflags: -I${includedir}
+Libs: -L${libdir} -lgd

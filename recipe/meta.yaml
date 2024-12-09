@@ -17,8 +17,7 @@ source:
     - patches/linux-fontconfig-basic.patch
 
 build:
-  #skip: True  # [win]
-  number: 10
+  number: 11
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libgd
     - {{ pin_subpackage('libgd', max_pin='x.x') }}
@@ -48,8 +47,16 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libgd.a  # [linux]
-    - test -f $PREFIX/lib/libgd${SHLIB_EXT}  # [not win]
+    - test -f $PREFIX/lib/libgd.a                           # [not win]
+    - test -f $PREFIX/lib/libgd${SHLIB_EXT}                 # [not win]
+    - test -f $PREFIX/include/gd.h                          # [not win]
+    - test -f $PREFIX/lib/pkgconfig/gdlib.pc                # [not win]
+
+    - if not exist %LIBRARY_LIB%\libgd.lib exit 1           # [win]
+    - if not exist %LIBRARY_BIN%\libgd.dll exit 1           # [win]
+    - if not exist %LIBRARY_INC%\gd.h exit 1                # [win]
+    - if exist %LIBRARY_INC%\config.h exit 1                # [win]
+    - if not exist %LIBRARY_LIB%\pkgconfig\gdlib.pc exit 1  # [win]
 
 about:
   home: http://libgd.github.io/
