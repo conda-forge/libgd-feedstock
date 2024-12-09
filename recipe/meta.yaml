@@ -43,6 +43,7 @@ requirements:
     - libtiff
     - libwebp
     - xorg-libxpm  # [win]
+    - xorg-xorgproto  # [win]
     - zlib
 
 test:
