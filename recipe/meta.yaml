@@ -48,6 +48,8 @@ requirements:
     - zlib
 
 test:
+  requires:
+    - pkg-config
   commands:
     - test ! -f $PREFIX/lib/libgd.a                         # [not win]
     - test -f $PREFIX/lib/libgd${SHLIB_EXT}                 # [not win]
@@ -59,6 +61,8 @@ test:
     - if not exist %LIBRARY_INC%\gd.h exit 1                # [win]
     - if exist %LIBRARY_INC%\config.h exit 1                # [win]
     - if not exist %LIBRARY_LIB%\pkgconfig\gdlib.pc exit 1  # [win]
+
+    - pkg-config gdlib --cflags
 
 about:
   home: http://libgd.github.io/
