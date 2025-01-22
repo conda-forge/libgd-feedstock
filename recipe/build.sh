@@ -18,6 +18,7 @@ autoreconf -vfi
             --without-xpm \
             --without-x \
             --disable-werror \
+            --disable-static \
 || { cat config.log; exit 1; }
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
@@ -33,6 +34,3 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
   export FREETYPE_PROPERTIES=truetype:interpreter-version=35
   make check || { cat tests/test-suite.log; exit 1; }
 fi
-
-# We can remove this when we start using the new conda-build.
-find $PREFIX -name '*.la' -delete

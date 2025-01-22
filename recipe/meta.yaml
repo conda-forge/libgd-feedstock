@@ -49,7 +49,7 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libgd.a                           # [not win]
+    - test ! -f $PREFIX/lib/libgd.a                         # [not win]
     - test -f $PREFIX/lib/libgd${SHLIB_EXT}                 # [not win]
     - test -f $PREFIX/include/gd.h                          # [not win]
     - test -f $PREFIX/lib/pkgconfig/gdlib.pc                # [not win]
