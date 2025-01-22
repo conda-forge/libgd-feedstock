@@ -50,6 +50,7 @@ requirements:
 test:
   requires:
     - pkg-config
+    - zlib
   commands:
     - test ! -f $PREFIX/lib/libgd.a                         # [not win]
     - test -f $PREFIX/lib/libgd${SHLIB_EXT}                 # [not win]
