@@ -51,6 +51,7 @@ test:
   requires:
     - pkg-config
     - zlib
+    - expat
   commands:
     - test ! -f $PREFIX/lib/libgd.a                         # [not win]
     - test -f $PREFIX/lib/libgd${SHLIB_EXT}                 # [not win]
