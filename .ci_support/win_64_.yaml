@@ -1,5 +1,5 @@
 c_compiler:
-- vs2019
+- vs2022
 c_stdlib:
 - vs
 channel_sources:
@@ -13,7 +13,7 @@ fontconfig:
 freetype:
 - '2'
 icu:
-- '75'
+- '78'
 libjpeg_turbo:
 - '3'
 libpng:
